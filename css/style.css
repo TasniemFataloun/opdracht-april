@@ -1,0 +1,137 @@
+.style {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.introduction {
+  background-image: url("../images/Nederlands-bos-in-de-herfst-2000x1200.jpg");
+  background-attachment: fixed;
+  width: 100%;
+  background-size: cover;
+  height: 100vh;
+  transition: all 2s;
+}
+.introduction .text-introduction {
+  padding-top: 20rem;
+}
+.introduction h1 {
+  margin: 0 auto;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+}
+.introduction h2 {
+  opacity: 0;
+  animation: fade-in 1s ease-in-out 0.7s forwards;
+  margin: 0 auto;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sticky-nav {
+  display: flex;
+  gap: 0.5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 10rem;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+.sticky-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sticky-nav li {
+  padding: 10px;
+}
+
+.sticky-nav li a:hover {
+  color: #666;
+}
+
+.flex {
+  display: flex;
+}
+
+.section1 {
+  background-image: url("../images/Nederlands-bos-in-de-herfst-2000x1200.jpg");
+  scroll-snap-align: start;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+.section1 .paragraaf {
+  background-color: #666;
+  padding: 4rem;
+  width: 20rem;
+}
+
+.section2 {
+  background-image: url("../images/c72a4931-3af0-4157-80f5-cd4e428a539f.jpg&h=350&w=870&v=1638283963");
+  scroll-snap-align: start;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+.section2 .paragraaf {
+  background-color: #666;
+  padding: 4rem;
+  width: 20rem;
+}
+
+.section3 {
+  background-image: url("../images/Nederlands-bos-in-de-herfst-2000x1200.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+.section4 {
+  background-image: url("../images/c72a4931-3af0-4157-80f5-cd4e428a539f.jpg&h=350&w=870&v=1638283963");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+.section5 {
+  background-image: url("../images/Nederlands-bos-in-de-herfst-2000x1200.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
