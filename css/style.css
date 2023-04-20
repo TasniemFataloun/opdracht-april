@@ -1,31 +1,44 @@
-.style {
-  margin: 0 auto;
-  max-width: 70rem;
+body {
+  overflow-x: hidden;
+  height: 100%;
+  font-family: Roboto;
 }
-
-main {
+body p {
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 3rem 0 0;
+  margin-top: 10rem;
+  width: 35rem;
+  height: auto;
+  float: right;
+  background-color: rgb(220, 74, 74);
+  padding: 2rem;
+}
+body main {
+  overflow-y: scroll;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  height: 100%;
 }
-
-.introduction {
-  background-image: url("../images/Nederlands-bos-in-de-herfst-2000x1200.jpg");
+body main .introduction {
+  background-image: url("../images/bg.jpeg");
   background-attachment: fixed;
   width: 100%;
   background-size: cover;
-  height: 100vh;
+  height: 103vh;
   transition: all 2s;
 }
-.introduction .text-introduction {
+body main .introduction .text-introduction {
   padding-top: 20rem;
 }
-.introduction h1 {
+body main .introduction h1 {
   margin: 0 auto;
   font-size: 5rem;
   color: white;
   text-align: center;
 }
-.introduction h2 {
+body main .introduction h2 {
   opacity: 0;
   animation: fade-in 1s ease-in-out 0.7s forwards;
   margin: 0 auto;
@@ -41,90 +54,94 @@ main {
     opacity: 1;
   }
 }
-
-.sticky-nav {
-  display: flex;
-  gap: 0.5rem;
-  position: sticky;
+body main .letter-background {
+  background-color: rgb(143, 143, 143);
+}
+body main .letter-background .letter img {
+  height: 100vh;
+  scroll-snap-align: start;
+  background-repeat: no-repeat;
+  width: 33rem;
+  margin: 0 auto;
+}
+body main section {
+  scroll-snap-align: start;
+}
+body main .small {
+  padding: 10px;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 10rem;
-  background-color: #fff;
-  border-right: 1px solid #ddd;
-  overflow-y: auto;
-}
-.sticky-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.sticky-nav li {
-  padding: 10px;
-}
-
-.sticky-nav li a:hover {
-  color: #666;
-}
-
-.flex {
   display: flex;
+  flex-direction: column;
+  width: 10rem;
+  z-index: 1000;
+  position: sticky;
+  height: 0.1rem;
+  margin-top: -1.2rem;
 }
-
-.section1 {
-  background-image: url("../images/Nederlands-bos-in-de-herfst-2000x1200.jpg");
-  scroll-snap-align: start;
+body main .small a {
+  font-size: 1rem;
+  line-height: 2rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  position: sticky;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(248, 224, 152, 0.7882352941);
+}
+body main .section1 {
+  background-image: url("../images//letterrrs.jpeg");
   background-size: cover;
   color: white;
   height: 100vh;
+  margin-top: -1.2rem;
+  scroll-snap-align: start;
 }
-.section1 .paragraaf {
+body main .section1 .paragraaf {
   background-color: #666;
   padding: 4rem;
   width: 20rem;
 }
-
-.section2 {
-  background-image: url("../images/c72a4931-3af0-4157-80f5-cd4e428a539f.jpg&h=350&w=870&v=1638283963");
-  scroll-snap-align: start;
+body main .section2 {
+  background-image: url("../images/alley.webp");
   background-size: cover;
   color: white;
   height: 100vh;
+  background-attachment: fixed;
+  scroll-snap-align: start;
 }
-.section2 .paragraaf {
+body main .section2 .paragraaf1 {
   background-color: #666;
   padding: 4rem;
   width: 20rem;
+  margin: 0 auto;
 }
-
-.section3 {
-  background-image: url("../images/Nederlands-bos-in-de-herfst-2000x1200.jpg");
+body main .section3 {
+  background-image: url("../images/hat.jpeg");
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+body main .section4 {
+  background-image: url("../images/forest.webp");
   background-attachment: fixed;
   background-size: cover;
   color: white;
   height: 100vh;
+  scroll-snap-align: start;
 }
-
-.section4 {
-  background-image: url("../images/c72a4931-3af0-4157-80f5-cd4e428a539f.jpg&h=350&w=870&v=1638283963");
-  background-attachment: fixed;
+body main .section5 {
+  background-image: url("../images/stone.webp");
   background-size: cover;
   color: white;
   height: 100vh;
+  scroll-snap-align: start;
 }
-
-.section5 {
-  background-image: url("../images/Nederlands-bos-in-de-herfst-2000x1200.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  color: white;
-  height: 100vh;
-}
-
-.active.fade-right {
+body main .active.fade-right {
   animation: fade-right 1s ease-in;
 }
-
 @keyframes fade-right {
   0% {
     transform: translateX(100px);

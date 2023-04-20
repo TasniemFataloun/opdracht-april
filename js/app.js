@@ -1,17 +1,27 @@
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
+gsap.registerPlugin(ScrollTrigger);
+const main = document.querySelector("main");
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 0;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
+for (let i = 1; i <= 5; i++) {
+  gsap.from(`#section${i} .paragraaf${i}`, {
+    scrollTrigger: {
+      scroller: main,
+      trigger: `#section${i}`,
+      toggleActions: "restart none none pause",
+    },
+    x: 500,
+    opacity: 0,
+    duration: 1.5,
+  });
 }
 
-window.addEventListener("scroll", reveal);
+gsap.registerPlugin(ScrollTrigger);
+
+// use ScrollTrigger to trigger the animation when .letter-img comes into view
+gsap.to('.letter img', {
+  scrollTrigger: {
+    trigger: '.letter img',
+    toggleActions: "restart none none none"
+  },
+  x:50, 
+  duration: 2
+});
